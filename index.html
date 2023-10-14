@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+  <h1>Order details</h1>   
+
+
+
+    <script>
+   
+   var food = prompt("Enter Your food Order: pizza , biryani , burger");
+
+if (food == "pizza" || food == "biryani" || food == "burger") {
+  document.write("Your order: " + food);
+}
+
+var flavours = prompt("Enter your flavors: meat , BBQ , Hawaiian , Buffalo , Margherita ,Pepperoni ");
+
+if (flavours == "meat" || "BBQ" || "Hawaiian" ||  "Buffalo" ||  "Margherita" ||  "Pepperoni") {
+  document.write("<br>");
+  document.write("Flavors: " + flavours);
+}
+
+var size = prompt("Enter your size:(s ,500),(m,1000) , (l, 1500) ");
+
+if (size == "s" || "m" || "l") {
+  document.write("<br>");
+  document.write("Size: " + size);
+  
+  var qty = prompt("Enter your qty: 1 ,2 ,3");
+  
+  if (!isNaN(qty)) {
+    document.write("<br>");
+    document.write("Qty: " + qty);
+    
+    var cost;
+    
+    if (size == "s") {
+      cost = 500;
+    } else if (size == "m") {
+      cost = 1000;
+    } else if (size == "l") {
+      cost = 1500;
+    }
+    
+    document.write("<br>");
+    document.write("Total cost: " + (qty * cost));
+  } else {
+    document.write("<br>");
+    document.write("Invalid quantity. Please enter a valid number.");
+  }
+} else {
+  document.write("<br>");
+  document.write("Invalid size. Please enter 's', 'm', or 'l' for size.");
+}
+document.write("<br>");
+document.write("<h1>Thanks</h1>")
+
+
+
+
+
+    </script>
+</body>
+</html>
